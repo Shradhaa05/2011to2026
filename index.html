@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15 years & birthday</title>
+  <!-- external CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- fonts preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- FULL PHOTO BACKGROUND (her photo) -->
+  <div class="photo-bg"></div>
+  
+  <!-- minimal floating elements (just a few sparkles, no hearts) -->
+  <div class="floating-elements" id="floatContainer"></div>
+
+  <!-- Spotify Dooron Dooron Embed (user clicks to play) -->
+  <div class="spotify-player">
+    <iframe 
+      style="border-radius:12px" 
+      src="https://open.spotify.com/embed/track/0q5e5KtUOhYQujmhLP0pKd?utm_source=generator" 
+      width="100%" 
+      height="80" 
+      frameBorder="0" 
+      allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="container">
+    <!-- hero section full screen with photo background -->
+    <section class="hero">
+      <h1>Happy Birthday Mummy 💕</h1>
+      <p class="bold">From 2011 to 2026… Still Unbreakable.</p>
+      <div class="countdown-badge" id="countdown">Loading...</div>      
+      <div class="scroll-arrow">👇👇👇👇</div>
+    </section>
+
+    <!-- interactive gift boxes -->
+    <h2 class="cursive section-title">🎁 open your Gifts</h2>
+    <div class="gift-grid">
+      <!-- gift 1 YSL -->
+      <div class="gift-box" id="gift1">
+        <div class="gift-lid">🎀</div>
+        <div class="gift-reveal">
+          <img src="xyl.jpg" alt="heels">
+          <p>For the queen you are 👑</p>
+        </div>
+      </div>
+      <!-- gift 2 Rolls-Royce -->
+      <div class="gift-box" id="gift2">
+        <div class="gift-lid">🎁</div>
+        <div class="gift-reveal">
+          <img src="RR.jpg" alt="rolls royce">
+          <p>Because you deserve royal treatment 💎</p>
+        </div>
+      </div>
+      <!-- gift 3 Cadbury rain -->
+      <div class="gift-box" id="gift3">
+        <div class="gift-lid">🍫</div>
+        <div class="gift-reveal rain-area" id="rainTarget">
+          <div class="choco-rain" id="chocoRain"></div>
+          <img src="DM.jpg" alt="rolls royce">
+          <p style="margin-top:90px;">Our friendship is sweeter than this 🍫</p>
+        </div>
+      </div>
+      <!-- gift 4 Rolex -->
+      <div class="gift-box" id="gift4">
+        <div class="gift-lid">⌚</div>
+        <div class="gift-reveal">
+          <img src="Rolex.jpg" class="rotate-img" alt="rolex">
+          <p>Time changes. We don’t. ⏳</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- memory gallery polaroid -->
+    <h2 class="cursive section-title">📸 Gallery</h2>
+    <div class="gallery">
+      <div class="polaroid"><img src="Pic1.jpeg" alt="school"><p>Smiling Into Another Beautiful Year</p></div>
+      <div class="polaroid"><img src="Pic2.jpeg" alt="fights"><p>Killer Eyes, Birthday Glow</p></div>
+      <div class="polaroid"><img src="pic7.jpeg" alt="crazy"><p>Wrapped in Grace</p></div>
+      <div class="polaroid"><img src="pic5.jpeg" alt="strong"><p>Different paths, same bond. Always.</p></div>
+    </div>
+
+    <!-- lightbox modal -->
+    <div id="lightbox" class="lightbox"><span class="close-light">&times;</span><img id="lightbox-img" src=""></div>
+
+    <!-- jagannath spiritual section -->
+    <section class="jagannath">
+      <div class="diya">🙏</div>
+      <img src="Jg.webp" alt="Jagannath">
+      <h2 style="color:#5d3a42; margin:25px;">May Lord Jagannath bless you with happiness, success, protection and endless smiles.</h2>
+      <div class="petal" style="left:10%;">🌸</div>
+      <div class="petal" style="left:50%;">🌼</div>
+      <div class="petal" style="left:85%;">🌸</div>
+    </section>
+
+    <!-- friendship timeline -->
+    <h2 class="cursive section-title">🕰️ forever timeline</h2>
+    <div class="timeline">
+      <span class="timeline-item" data-year="2011">2011 – First meeting</span>
+      <span class="timeline-item" data-year="2015">2015 – Growing stronger</span>
+      <span class="timeline-item" data-year="2021">2021 – School Memories</span>
+      <span class="timeline-item" data-year="2022">2023 – Miles Apart, Memories Together</span>
+      <span class="timeline-item" data-year="2026">2026 – Still inseparable</span>
+    </div>
+    <div id="timelinePopup" class="memory-popup">✨ click a year ✨</div>
+
+    <!-- emotional letter with typewriter -->
+    <h2 class="cursive section-title">Mummyyyyyyyyy</h2>
+    <div class="letter-section" id="typewriterContainer"></div>
+
+    <!-- funny letter (static) -->
+    <h2 class="cursive section-title">Our Friendship</h2>
+
+    <div class="funny-letter" id="funnyLetter"></div>
+
+    
+
+    <!-- footer message -->
+    <div class="footer-note glass-panel">
+      <p class="cursive" style="font-size: 2rem;">15 years & forever ❤️</p>
+    </div>
+  </div>
+
+  <!-- canvas confetti (hidden by default) -->
+  <canvas id="confettiCanvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none;"></canvas>
+
+  <!-- external javascript -->
+  <script src="script.js"></script>
+</body>
+</html>
