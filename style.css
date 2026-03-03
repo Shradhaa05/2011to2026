@@ -22,7 +22,7 @@
     width: 100%;
     height: 100%;
     /* REPLACE THIS URL WITH YOUR ACTUAL PHOTO URL OR LOCAL PATH */
-    background-image: url('Pic4.jpeg'); /* example beautiful girl photo - replace with her actual photo */
+    background-image: url('pic4.jpeg'); /* example beautiful girl photo - replace with her actual photo */
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
